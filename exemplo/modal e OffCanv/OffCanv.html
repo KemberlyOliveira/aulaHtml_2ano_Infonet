@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Off Canvas</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Exemplo de Barra Off canvas</h2>
+       
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demoOffcanvas">
+          Abrir Esquerda
+        </button>
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+            Abrir Direita
+          </button>
+    
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">
+            Abrir Topo
+          </button>
+    
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
+            Abrir Rodapé
+          </button>
+          <button id="btnBackDropProgrammatic" class="btn btn-outline-secondary">
+            Mostrar backdrop 
+          </button>
+      </div>
+
+
+      
+      <!-- dentro -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="demoOffcanvas" aria-labelledby="demoOffcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="demoOffcanvasLabel">Painel Off canvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Um Painel Fora da página principal do lado esquerdo</p>
+          <ul>
+            <li>Nav link 1</li>
+            <li>Nav link 2</li>
+            <li>Nav link 3</li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel" class="offcanvas-title">Painel Direito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+        </div>
+        <div class="offcanvas-body">
+          Este painel abre a partir da direita. Coloque aqui menus, filtros ou qualquer conteúdo.
+          <ul class="mt-2">
+            <li>Opção A</li>
+            <li>Opção B</li>
+            <li>Opção C</li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Top panel -->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasTopLabel" class="offcanvas-title">Painel Topo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+        </div>
+        <div class="offcanvas-body">
+          Este painel aparece a partir do topo. Use para notificações rápidas ou ações.
+        </div>
+      </div>
+    
+      <!-- Bottom panel -->
+      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasBottomLabel" class="offcanvas-title">Painel Rodapé</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+        </div>
+        <div class="offcanvas-body">
+          Este painel surge a partir do rodapé. Pode conter informações de contexto, ações rápidas ou um resumo.
+        </div>
+      </div>
+    <div class="mb-4">
+        <h1>Off Canvas exposto(nn consegui implementar ele :/   ):</h1>
+    <img src="img/sssss.png" >
+    </div>    
+
+    <div class="offcanvas offcanvas-start offcanvas-backdrop-only" tabindex="-1" id="backdropOnlyOffcanvas" aria-hidden="true" aria-labelledby="backdropOnlyLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="backdropOnlyLabel"> </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // fallback geral para botões com data-bs-toggle="offcanvas"
+          document.querySelectorAll('[data-bs-toggle="offcanvas"]').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+              // se o evento já chamou o comportamento nativo do bootstrap, não duplicar
+              // (mas chamar de todo modo é idempotente)
+              var selector = btn.getAttribute('data-bs-target') || btn.getAttribute('data-target');
+              if (!selector) return;
+              var el = document.querySelector(selector);
+              if (!el) return;
+              var oc = bootstrap.Offcanvas.getOrCreateInstance(el);
+              oc.show();
+            });
+          });
+    
+          // botão programático para mostrar o backdrop
+          document.getElementById('btnBackDropProgrammatic').addEventListener('click', function () {
+            var el = document.getElementById('backdropOnlyOffcanvas');
+            var oc = bootstrap.Offcanvas.getOrCreateInstance(el);
+            oc.show();
+          });
+    
+          // Observação: o offcanvas-backdrop-only foi estilizado para ser invisível.
+          // clicar no backdrop ou pressionar Esc fecha-o por padrão (comportamento Bootstrap).
+        });
+      </script>
+    </body>
+    </html>
+</body>
+</html>

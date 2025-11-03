@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todos os Modais Sem JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="p-4">
+    <!-- BOTÕES DE ACIONAMENTO -->
+    <div class="mb-4 d-flex flex-wrap gap-2">
+        <!-- Aqui mudei para abrir sem JS -->
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExibirManual">
+            Abrir Modal Manual
+        </button>
+
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalFechamentoPrevenido">
+            Fechamento Prevenido
+        </button>
+        <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalScrollable">
+            Modal com Rolagem
+        </button>
+        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalToggle1">
+            Alternar Modais
+        </button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalFullscreen">
+            Modal Fullscreen
+        </button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSimples">
+            Abrir Modal Simples
+        </button>
+    </div>
+
+    <!-- 1. Modal Exibição Manual -->
+    <div class="modal fade" id="modalExibirManual" tabindex="-1" aria-labelledby="label1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="label1">Modal Manual</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    Exibido via <code>data-bs-toggle="modal"</code> e <code>data-bs-target</code> (sem JS).
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Modal com Evento hidePrevented -->
+    <div class="modal fade" id="modalFechamentoPrevenido" tabindex="-1" aria-labelledby="label4" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="label4">Fechamento Prevenido</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Não fecha ao clicar fora ou apertar ESC.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Modal com Scroll Interno -->
+    <div class="modal fade" id="modalScrollable" tabindex="-1" aria-labelledby="labelScrollable" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelScrollable">Modal com Rolagem</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Conteúdo longo para rolar -->
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio doloribus quos reprehenderit suscipit. Incidunt iure enim accusamus voluptas omnis, nemo similique ipsam assumenda atque eum. Dolor pariatur aliquam porro laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id non illo. Atque mollitia nam, aliquid, veritatis delectus accusantium adipisci ipsa, non illo maxime harum possimus placeat pariatur quis iure?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio doloribus quos reprehenderit suscipit. Incidunt iure enim accusamus voluptas omnis, nemo similique ipsam assumenda atque eum. Dolor pariatur aliquam porro laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id non illo. Atque mollitia nam, aliquid, veritatis delectus accusantium adipisci ipsa, non illo maxime harum possimus placeat pariatur quis iure?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio doloribus quos reprehenderit suscipit. Incidunt iure enim accusamus voluptas omnis, nemo similique ipsam assumenda atque eum. Dolor pariatur aliquam porro laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id non illo. Atque mollitia nam, aliquid, veritatis delectus accusantium adipisci ipsa, non illo maxime harum possimus placeat pariatur quis iure?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio doloribus quos reprehenderit suscipit. Incidunt iure enim accusamus voluptas omnis, nemo similique ipsam assumenda atque eum. Dolor pariatur aliquam porro laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id non illo. Atque mollitia nam, aliquid, veritatis delectus accusantium adipisci ipsa, non illo maxime harum possimus placeat pariatur quis iure?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio doloribus quos reprehenderit suscipit. Incidunt iure enim accusamus voluptas omnis, nemo similique ipsam assumenda atque eum. Dolor pariatur aliquam porro laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id non illo. Atque mollitia nam, aliquid, veritatis delectus accusantium adipisci ipsa, non illo maxime harum possimus placeat pariatur quis iure?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Alternância entre Modais -->
+    <div class="modal fade" id="modalToggle1" aria-hidden="true" aria-labelledby="toggleLabel1" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="toggleLabel1">Modal 1</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    Clique para abrir o segundo modal e esconder este.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#modalToggle2" data-bs-toggle="modal">
+                        Abrir Modal 2
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalToggle2" aria-hidden="true" aria-labelledby="toggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="toggleLabel2">Modal 2</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    Clique para voltar para o primeiro modal.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#modalToggle1" data-bs-toggle="modal">
+                        Voltar ao Modal 1
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Modal Fullscreen em telas pequenas -->
+    <div class="modal fade" id="modalFullscreen" tabindex="-1" aria-labelledby="labelFullscreen" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelFullscreen">
+                        Modal Fullscreen (em telas pequenas)
+                    </h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    Este modal ocupa a tela inteira em dispositivos pequenos.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6 MODAL SIMPLES -->
+    <div class="modal fade" id="modalSimples" tabindex="-1" aria-labelledby="modalSimplesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSimplesLabel">Modal Simples</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+                    Este é um modal simples, aberto apenas com HTML e os atributos do
+                    Bootstrap.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle (necessário para o funcionamento dos modais) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

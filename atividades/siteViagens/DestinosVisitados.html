@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina com Grid Bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <style>
+        li{  display: inline-block; margin-right: 10px; }
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Aventura além dos seus sonhos</h1>
+
+    </header>
+
+    <!-- Navegação -->
+    <nav class="navabar navabar-expand*lg navbar-dark bg-dark">
+        <div class="cotainer">
+            <ul > 
+                <li><a href="index.html">Inicio</a> </li>
+                <li><a href="DestinosVisitados.html">DestinosVisitados</a></li> 
+                <li><a href="DicasViagem.html">Dicas de Viagem</a></li> 
+            </ul>  
+        </div> 
+    </nav>
+
+    <!--Corpo do Site com Grid -->
+    <main class="container my-5"> 
+        <div class="row"> 
+
+        <!-- Coluna Lateral Esquerda  --> 
+        <aside class="col-md-4 mb-3"> 
+            <div class="p-3 bg-light border rounded"> 
+                <h4>Curiosidades sobre os Destinos:</h4>
+                <p>   </p>
+                <p><b>Paris é a "Cidade da Luz":</b></p>
+                <p>Você sabia que Paris foi uma das primeiras cidades a ser iluminada com lâmpadas elétricas? Esse fato histórico é o que lhe conferiu o título de "Cidade da Luz". Hoje, a iluminação noturna da cidade é um dos seus maiores encantos, deixando as ruas ainda mais mágicas à noite.</p>
+                <p><b>O Deserto de Atacama:</b></p>
+                <p>Embora muitas pessoas associem os desertos a dunas de areia, o Deserto de Atacama no Chile é único por suas paisagens diversas. Ele é considerado o deserto mais seco do mundo, mas abriga diversas formações geológicas impressionantes, como o Vale da Morte e o Vale da Lua. Além disso, é um lugar famoso para observação de estrelas, devido à sua atmosfera extremamente limpa.</p>
+                <p><b> Fushimi Inari, Quioto:</b></p>
+                <p>Uma das atrações mais emblemáticas de Quioto é o Fushimi Inari Taisha, um templo dedicado a Inari, o deus xintoísta da fertilidade e arroz. O que torna esse templo tão fascinante são os milhares de portais vermelhos chamados torii que formam longos corredores nas montanhas. Esse caminho oferece uma experiência única, sendo um dos locais mais fotografados e visitados de Quioto, representando o equilíbrio entre espiritualidade e beleza natural.</p>
+            </div> 
+        </aside>
+            <!-- Conteúdo Principal -->
+            <section class="col-md-8 mb-3 "  > 
+                <div class="p-3 bg-white border rounded shadow-sm"> 
+                    <h2>Destinos Visitados</h2> 
+                    <p><b>Paris, França:</b></p>
+                    <p>Paris é uma cidade vibrante, cheia de história e cultura. Durante minha visita, tive o privilégio de conhecer a icônica Torre Eiffel, explorar o vasto Museu do Louvre e caminhar pelas ruas encantadoras de Montmartre. O que mais me impressionou foi a atmosfera única da cidade, onde cada esquina oferece uma nova surpresa, seja um café charmoso ou uma vista deslumbrante do Sena. Paris realmente é uma cidade que cativa e encanta, uma verdadeira joia para quem ama arte, história e gastronomia.</p>
+                    <img src="ParisFrança.jpg" alt="Descrição da imagem" style="width: 570px; height: 400px;" >
+
+                    <p><b>Deserto de Atacama, Chile:</b></p>
+                    <p>O Deserto de Atacama é um dos lugares mais impressionantes que já visitei. Conhecido por ser o deserto mais seco do mundo, ele oferece paisagens que parecem de outro planeta: vastas dunas de areia, lagos salgados, e o céu mais estrelado que já vi. Uma das experiências mais marcantes foi a visita ao Vale da Lua, com suas formações rochosas surreais. A sensação de estar em um lugar tão remoto e imaculado é algo que vai ficar gravado na minha memória para sempre.</p>
+                    <img src="DesertoAtacamaChile.jpg" alt="Descrição da imagem" style="width: 570px; height: 400px;" >
+
+                    <p><b> Quioto, Japão:</b></p>
+                    <p>Quioto, no Japão, é o lugar perfeito para quem busca um mergulho na tradição e na cultura japonesa. Durante minha visita, explorei templos como o Kinkaku-ji (Pavilhão Dourado) e o Fushimi Inari, com seus famosos portais vermelhos. O charme de Quioto não está apenas em seus monumentos históricos, mas também em seus jardins tranquilos, ruelas antigas e a incrível hospitalidade do povo japonês. É uma cidade que transmite paz e serenidade a cada passo.</p>
+                    <img src="Fushimi Inari, Quioto.jpg" alt="Descrição da imagem" style="width: 570px; height: 400px;" >
+                </div>
+                </div> 
+            </section> 
+        </div> 
+    </main> 
+
+    <!-- Rodapé --> 
+    <footer class="bg-dark text-white text-center py-3"> 
+        <p>&copy; 2025 Todos os direitos reservados.</p> -
+    </footer> 
+
+    <!-- Scripts Bootstrap --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap "></script>
+</body>
+</html>

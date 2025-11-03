@@ -1,0 +1,19 @@
+h1{
+    color:cornflowerblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    background-color: aqua;
+}
+
+.container-fluid{
+    background-color: blueviolet;
+    border: 3px skyblue;
+}
+
+.btn-primary{
+    background-color: deeppink;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

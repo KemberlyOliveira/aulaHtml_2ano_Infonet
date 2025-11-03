@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <!--Headings-->
+        <h1>Headings</h1>
+        <h2>Headings</h2>
+        <h6>Headings</h6>
+        <p class="h1">Parágrafo Headings</p>
+
+        <!-- Display -->
+        <h1 class="display1">chamando atencao</h1>
+        <p class="display4">este é o subtitulo</p>
+
+        <!-- Inline -->
+        <p>Precisamos <mark>destacar aqui</mark> para veender esse produto</p>
+        <p>Lista de tarefas:</p>
+        <p><del>Funcionalidade A</del></p>
+        <p>O <strong>Produto X</strong> é o melhor do mercado</p>
+
+        <!-- Citacoes -->
+        <blockquote class="blockquote">
+            <p>HTML e CSS sao a base do bootstrap</p>
+        </blockquote>
+        <figure>
+            <blockquote class="blockquote">
+                Não deixe o ruido das opinioes abafar a sua propria voz interior.
+            </blockquote>
+            <figcaption class="blockquote-footer">Uma frase de <cite>Steve Jobs </cite></figcaption>
+        </figure>
+
+        <!-- Listas -->
+        <ul>
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+        <h2>Lista sem estilo</h2>
+        <ul class="list-unstyled">
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+        <h2>Lista inline</h2>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">link 1</a></li>
+            <li class="list-inline-item"><a href="#">link 2</a></li>
+            <li class="list-inline-item"><a href="#">link 3</a></li>
+        </ul>
+
+        <!-- Imagens -->
+        <div class="col-md-4 m4">
+            <img src="img/g_1 1.jpg">
+        </div>
+        <div class="col-md-4 m4">
+            <img class="img-fluid" src="img/g_1 1.jpg">
+        </div>
+        <div class="col-md-4 m4">
+            <img class="img-thumbnail" src="img/avatar.png">
+        </div>  
+        <div class="col-md-4 m4">
+            <figure class="figure">
+                <img class="figure-img img-fluid rounded" src="img/g_1 1.jpg">
+                <figure class="figure-caption">Grafite av. Paulista</figure>
+            </figure>
+        </div>
+
+        <!-- Tabelas -->
+        <div class="col-6">
+            <table class="tabela m4">
+                <thead>
+                    <th scope="col">Id</th>
+                    <th scope="col">nome</th>
+                    <th scope="col">sobernome</th>
+                    <th scope="col">e-mail</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td scope="row">Josi</td>
+                        <td scope="row">Franco</td>
+                        <td scope="row">josi@email.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td scope="row">Henry</td>
+                        <td scope="row">Binatti</td>
+                        <td scope="row">henry@email.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td scope="row">João</td>
+                        <td scope="row">Pacheco</td>
+                        <td scope="row">joao@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6 m4">
+            <table class="table table-dark table-striped"> <!--semanmantica html -> estrutura --> <!---estilizacao  css e bootstreap--> <!--javascript: parte de interacao-->
+                <thead>
+                    <th scope="col">Id</th>
+                    <th scope="col">Produto</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td scope="row">Geladeira</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td scope="row">Fogão</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td scope="row">Tv</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

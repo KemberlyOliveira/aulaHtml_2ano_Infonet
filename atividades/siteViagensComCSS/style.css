@@ -1,0 +1,60 @@
+ul{
+    list-style: none;
+    background: rgb(104, 173, 217);
+        }
+        ul li{
+            display: inline-block;
+            position: relative;
+        }
+    ul li a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(62, 169, 174);
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    }
+    
+    ul li ul.dropdown{
+    width: 100%;
+    background: rgb(0, 0, 0);
+    position:absolute;
+    z-index: 999;
+    display: none;
+    }
+    
+    ul li a:hover{
+        background: rgb(131, 186, 194);
+    }
+    
+    
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+    nav { 
+        background-color: #26598e; 
+        padding: 10px; 
+    }
+    nav ul { 
+        list-style: none; 
+        display: flex; 
+        justify-content: center;
+    }
+    nav ul li { 
+        margin: 0 15px; 
+    }
+    nav ul li a { 
+        color: white; 
+        text-decoration: none; 
+        font-weight: bold; 
+    }
+    
+/* Mudando a cor de fundo do header */
+header {
+    background-color: #3498db; /* Cor personalizada - Azul */
+}
+
+/* Mudando a cor de fundo do aside */
+aside {
+    background-color: #f39c12; /* Cor personalizada - Laranja */
+}
